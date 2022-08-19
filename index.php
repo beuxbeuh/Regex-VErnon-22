@@ -10,7 +10,13 @@
     <h1>Je fais des Regex</h1>
     <?php
 
-        $masque = '/michel/i'; //  La lettre i rend le masque inssensible a la casse
+        $masque = '/m/i'; //  La lettre i rend le masque inssensible a la casse
+        $chaine = "DaMso Vie";
+        if (preg_match($masque, $chaine) ) {
+            echo 'Y\'a au moins une occurence';
+            echo '<p> Le nombre d\'occurence est de' . preg_match_all($masque, $chaine) . '</p>'; 
+        } else
+            echo 'Pas vu pas pris';
 
     ?>
 </body>
